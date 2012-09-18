@@ -42,9 +42,12 @@ group :development, :test do
   gem 'faker'
   gem 'populator'
   gem 'rspec-rails'
-  gem 'cucumber-rails'
   gem 'capybara'
   gem 'database_cleaner'
   gem 'factory_girl_rails'
   gem 'launchy'
+end
+
+group :test do
+  gem 'cucumber-rails'
 end
