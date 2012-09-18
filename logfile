@@ -1,0 +1,37 @@
+LOG:  database system was shut down at 2012-09-18 15:00:05 PDT
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+FATAL:  role "dogbrigade" does not exist
+FATAL:  role "dogbrigade" does not exist
+FATAL:  role "dogbrigade" does not exist
+FATAL:  role "dogbrigade" does not exist
+FATAL:  role "dogbrigade" does not exist
+FATAL:  role "dogbrigade" does not exist
+FATAL:  role "dogbrigade" does not exist
+FATAL:  role "dogbrigade" does not exist
+FATAL:  role "dogbrigade" does not exist
+FATAL:  role "dogbrigade" does not exist
+FATAL:  role "dogbrigade" does not exist
+FATAL:  role "dogbrigade" does not exist
+FATAL:  role "dogbrigade" does not exist
+FATAL:  role "dogbrigade" does not exist
+FATAL:  role "dogbrigade" does not exist
+FATAL:  role "dogbrigade" does not exist
+FATAL:  role "dogbrigade" does not exist
+FATAL:  role "dogbrigade" does not exist
+FATAL:  role "dogbrigade" does not exist
+FATAL:  role "dogbrigade" does not exist
+FATAL:  role "dogbrigade" does not exist
+FATAL:  role "dogbrigade" does not exist
+FATAL:  role "dogbrigade" does not exist
+FATAL:  role "dogbrigade" does not exist
+ERROR:  unrecognized role option "dogbrigade" at character 38
+STATEMENT:  create role dogbrigade with createdb dogbrigade 'happy!23#Dog' 'dogbrigade';
+ERROR:  syntax error at or near "'dogbrigade'" at character 13
+STATEMENT:  create role 'dogbrigade' with createdb dogbrigade 'happy!23#Dog' 'dogbrigade';
+ERROR:  unrecognized role option "dogbrigade" at character 33
+STATEMENT:  create role myapp with createdb dogbrigade 'happy!23#Dog' 'dogbrigade';
+FATAL:  database "dogbrigade_development" does not exist
+FATAL:  database "dogbrigade_test" does not exist
+FATAL:  database "dogbrigade_production" does not exist
+FATAL:  database "dogbrigade" does not exist
