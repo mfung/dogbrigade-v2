@@ -50,6 +50,16 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'factory_girl_rails'
   gem 'launchy'
+  gem 'jasmine-rails'
+  gem 'spork-rails'
+  # Guard
+  gem 'guard'
+  gem 'guard-rails'
+  gem 'guard-spork'
+  gem 'guard-rspec'
+  gem 'guard-cucumber'
+  gem 'guard-rails-assets'
+  gem 'guard-jasmine-headless-webkit'
 end
 
 group :test do
