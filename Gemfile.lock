@@ -130,6 +130,9 @@ GEM
     pg (0.14.1)
     polyglot (0.3.3)
     populator (1.0.0)
+    rabl (0.7.2)
+      activesupport (>= 2.3.14)
+      multi_json (~> 1.0)
     rack (1.4.1)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -226,6 +229,7 @@ DEPENDENCIES
   launchy
   pg
   populator
+  rabl
   rails (= 3.2.8)
   rspec-rails
   sass-rails (~> 3.2.3)
