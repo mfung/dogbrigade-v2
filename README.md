@@ -46,3 +46,7 @@ dogbrigade version 2 opensource awesomeness
 
     cucumber:
         <<: *test
+
+# Testing Setup
+## Guard
+	bundle exec guard start
