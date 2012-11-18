@@ -267,6 +267,7 @@ DEPENDENCIES
   guard-rails-assets
   guard-rspec
   guard-spork
+  haml
   haml-rails
   jasmine-headless-webkit
   jasmine-rails
