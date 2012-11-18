@@ -31,7 +31,6 @@ guard 'spork', :rspec_env => { 'RAILS_ENV' => 'test' } do
   watch('Gemfile.lock')
   watch('spec/spec_helper.rb') { :rspec }
   watch('test/test_helper.rb') { :test_unit }
-  watch(%r{features/support/}) { :cucumber }
 end
 
 # Run JS and CoffeeScript files in a typical Rails 3.1 fashion, placing Underscore templates in app/views/*.jst
