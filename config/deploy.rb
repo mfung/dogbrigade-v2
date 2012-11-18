@@ -1,4 +1,4 @@
-require 'bundler/capistrano'
+#require 'bundler/capistrano'
 load 'deploy/assets'
 #require 'capistrano/ext/multistage'
 
