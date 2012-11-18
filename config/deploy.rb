@@ -1,5 +1,5 @@
 #require 'bundler/capistrano'
-load 'deploy/assets'
+#load 'deploy/assets'
 #require 'capistrano/ext/multistage'
 
 set :application, "dogbrigade"
