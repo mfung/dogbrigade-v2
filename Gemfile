@@ -51,6 +51,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'launchy'
   gem 'jasmine-rails'
+  gem 'jasmine-headless-webkit'
   gem 'spork-rails'
   # Guard
   gem 'guard'

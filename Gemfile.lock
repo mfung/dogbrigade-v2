@@ -263,6 +263,7 @@ DEPENDENCIES
   guard-rspec
   guard-spork
   haml-rails
+  jasmine-headless-webkit
   jasmine-rails
   jquery-rails
   launchy
