@@ -13,10 +13,9 @@ group :assets do
   gem 'haml-rails'
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
+  gem 'therubyracer', :platforms => :ruby
+  gem "less-rails"
   gem 'twitter-bootstrap-rails'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
 end
@@ -40,6 +39,7 @@ gem 'debugger'
 
 # API
 gem 'rabl'
+gem 'rest-client'
 
 group :development, :test do
   gem 'awesome_print'
@@ -57,11 +57,6 @@ group :development, :test do
   gem 'guard-rails'
   gem 'guard-spork'
   gem 'guard-rspec'
-  gem 'guard-cucumber'
   gem 'guard-rails-assets'
   gem 'guard-jasmine-headless-webkit'
-end
-
-group :test do
-  gem 'cucumber-rails'
 end
