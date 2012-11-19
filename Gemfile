@@ -40,6 +40,8 @@ gem 'capistrano'
 # API
 gem 'rabl'
 gem 'rest-client'
+gem 'turbolinks'
+gem 'cache_digests'
 
 group :development, :test do
   gem 'awesome_print'
