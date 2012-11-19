@@ -6,5 +6,6 @@ FactoryGirl.define do
     fname "John"
     lname "Doe"
     zip_code "92376"
+    password "secret"
   end
 end
