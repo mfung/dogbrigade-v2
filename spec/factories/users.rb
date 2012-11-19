@@ -2,9 +2,9 @@
 
 FactoryGirl.define do
   factory :user do
-    email "MyString"
-    fname "MyString"
-    lname "MyString"
-    zip_code "MyString"
+    sequence(:email) { |n| "johndoe#{n}@dogbrigade.com" }
+    fname "John"
+    lname "Doe"
+    zip_code "92376"
   end
 end
