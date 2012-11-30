@@ -9,6 +9,9 @@
 		= yield(:head)
 	%body
 		.container
+			.row.header
+				.span12
+					= image_tag 'dogbrigade-logo.png'
 			.row
 				.span12
 					= render :partial => 'layouts/global_menu'
