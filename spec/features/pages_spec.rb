@@ -6,11 +6,11 @@ feature 'Static Pages', %q{
   I need to have static pages they can visit to find out more information about the site
 } do
   context "guest" do
-    scenario 'be welcomed at the home page' do
+    scenario 'index page' do
       visit root_path
       expect(page).to have_content 'Welcome'
     end
-    scenario 'be able to visit the about us page' do
+    scenario 'about us page' do
       pending
     end
   end
