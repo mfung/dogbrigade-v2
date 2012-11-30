@@ -1,5 +1,21 @@
 require 'spec_helper'
 
+feature 'Static Pages', %q{
+  As a pet lover
+  In order to help other pet lovers find pets
+  I need to have static pages they can visit to find out more information about the site
+} do
+  context "guest" do
+    scenario 'be welcomed at the home page' do
+      visit root_path
+      expect(page).to have_content 'Welcome'
+    end
+    scenario 'be able to visit the about us page' do
+      pending
+    end
+  end
+end
+
 describe PagesController do
   describe "home" do
     before :each do
