@@ -16,3 +16,5 @@ rerun.txt
 pickle-email-*.html
 /.rvmrc
 /config/*.yml
+.DS_Store
+.jhw-cache
