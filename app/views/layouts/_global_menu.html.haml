@@ -3,8 +3,14 @@
 		= link_to 'Dogbrigade', root_path, class: 'brand'
 		%ul.nav
 			%li.active
-				= link_to 'Home', '#'
+				= link_to '<i class="icon-home icon-white"></i> Home'.html_safe, root_path
 			%li
-				= link_to 'Search', '#'
+				= link_to '<i class="icon-search icon-white"></i> Search'.html_safe, '#'
 			%li
-				= link_to 'Sign Up!', '#'
+				= link_to '<i class="icon-question-sign icon-white"></i> About Us'.html_safe, '#'
+		%ul.nav.pull-right
+			%li.divider-vertical
+			%li
+				= link_to '<i class="icon-star icon-white"></i> Sign Up!'.html_safe, '#'
+			%li
+				= link_to '<i class="icon-user icon-white"></i> Sign In'.html_safe, '#'
