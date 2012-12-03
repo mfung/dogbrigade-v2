@@ -11,7 +11,8 @@ feature 'Static Pages', %q{
       expect(page).to have_content 'Welcome'
     end
     scenario 'about us page' do
-      pending
+      visit about_us_path
+      expect(page).to have_content 'About Us'
     end
   end
 end

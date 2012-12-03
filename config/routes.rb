@@ -13,6 +13,7 @@ DogbrigadeV2::Application.routes.draw do
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
   
+  match 'about_us' => 'pages#about_us'
   resources :users
   
   # Sample resource route with options:
