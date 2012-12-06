@@ -19,6 +19,7 @@ DogbrigadeV2::Application.routes.draw do
   match 'logout' => 'sessions#destroy'
   
   resources :users
+  resources :sessions
   
   # Sample resource route with options:
   #   resources :products do
