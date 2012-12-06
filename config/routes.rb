@@ -14,6 +14,9 @@ DogbrigadeV2::Application.routes.draw do
   #   resources :products
   
   match 'about_us' => 'pages#about_us'
+  match 'login' => 'sessions#new'
+  match 'logout' => 'sessions#destroy'
+  
   resources :users
   
   # Sample resource route with options:

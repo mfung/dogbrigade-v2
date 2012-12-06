@@ -1,0 +1,6 @@
+= form_for 'login', html: {class: 'form-inline'} do |f|
+  %fieldset
+    %legend Login
+    = f.text_field :email, class: 'text_field span3', placeholder: 'Email'
+    = f.password_field :password, class: 'password_field span3', placeholder: 'Password'
+    = f.submit 'Login', class: 'btn btn-primary'

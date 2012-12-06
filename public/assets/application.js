@@ -20,6 +20,8 @@
             <script type="text/javascript">window.CSTF['bootstrap.js.coffee.js'] = '/Users/mfung/Workspace/dogbrigade-v2/app/assets/javascripts/bootstrap.js.coffee';</script>;
 <script type="text/javascript" src="/Users/mfung/Workspace/dogbrigade-v2/.jhw-cache/coffee_script/Users/mfung/Workspace/dogbrigade-v2/app/assets/javascripts/pages.js.coffee.js"></script>
             <script type="text/javascript">window.CSTF['pages.js.coffee.js'] = '/Users/mfung/Workspace/dogbrigade-v2/app/assets/javascripts/pages.js.coffee';</script>;
+<script type="text/javascript" src="/Users/mfung/Workspace/dogbrigade-v2/.jhw-cache/coffee_script/Users/mfung/Workspace/dogbrigade-v2/app/assets/javascripts/sessions.js.coffee.js"></script>
+            <script type="text/javascript">window.CSTF['sessions.js.coffee.js'] = '/Users/mfung/Workspace/dogbrigade-v2/app/assets/javascripts/sessions.js.coffee';</script>;
 <script type="text/javascript" src="/Users/mfung/Workspace/dogbrigade-v2/.jhw-cache/coffee_script/Users/mfung/Workspace/dogbrigade-v2/app/assets/javascripts/users.js.coffee.js"></script>
             <script type="text/javascript">window.CSTF['users.js.coffee.js'] = '/Users/mfung/Workspace/dogbrigade-v2/app/assets/javascripts/users.js.coffee';</script>;
 <script type="text/javascript" src="/Users/mfung/Workspace/dogbrigade-v2/app/assets/javascripts/application.js"></script>;
