@@ -1,4 +1,6 @@
 DogbrigadeV2::Application.routes.draw do
+  get "sessions/new"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -18,6 +20,8 @@ DogbrigadeV2::Application.routes.draw do
   match 'logout' => 'sessions#destroy'
   
   resources :users
+  match 'login' => 'sessions#new'
+  match 'logout' => 'sessions#destory'
   
   # Sample resource route with options:
   #   resources :products do
