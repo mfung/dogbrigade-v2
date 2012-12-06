@@ -24,6 +24,7 @@ feature 'Sessions Management', %q{
           click_button 'Login'
         end
         expect(page).to have_content('Logged in!')
+        expect(page).to have_content('Welcome, John Doe')
       end
       
       it 'does not login a user if invalid' do

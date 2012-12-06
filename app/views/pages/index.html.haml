@@ -1,5 +1,8 @@
 .alert.alert-info
   %b Find an adoptable dog:
-%h1 Welcome
+- if current_user 
+  %h1= "Welcome, #{current_user.name}"
+- else
+  %h1= "Welcome"
 %p
   this is a test 
