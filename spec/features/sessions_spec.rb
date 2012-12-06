@@ -38,4 +38,18 @@ feature 'Sessions Management', %q{
       end
     end 
   end
+  
+  context 'user' do
+    before :each do 
+      sign_in_user
+    end
+    describe 'Session#destroy' do
+      it 'needs to be able to log someone out' do
+        visit root_path
+        expect(page).to have_content('Logout')
+        click_link 'Logout'
+        expect(page).to have_content('You have successfully logged out!')
+      end
+    end
+  end
 end
