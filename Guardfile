@@ -48,10 +48,10 @@ guard 'jasmine-headless-webkit' do
   watch(%r{^spec/javascripts/(.*)_spec\..*}) { |m| newest_js_file(spec_location % m[1]) }
 end
 
-guard 'rails' do
-  watch('Gemfile.lock')
-  watch(%r{^(config|lib)/.*})
-end
+# guard 'rails' do
+#   watch('Gemfile.lock')
+#   watch(%r{^(config|lib)/.*})
+# end
 
 # Make sure this guard is ABOVE any other guards using assets such as jasmine-headless-webkit
 # It is recommended to make explicit list of assets in `config/application.rb`
