@@ -2,6 +2,13 @@ require 'rubygems'
 require 'spork'
 #uncomment the following line to use spork with the debugger
 #require 'spork/ext/ruby-debug'
+def sign_in_user
+  user = FactoryGirl.create(:user, email: 'test@mail.com')
+  visit login_path
+  fill_in 'login[email]', with: user.email
+  fill_in 'login[password]', with: user.password
+  click_button 'Login'
+end
 
 Spork.prefork do
   # Loading more in this block will cause your tests to run faster. However,
