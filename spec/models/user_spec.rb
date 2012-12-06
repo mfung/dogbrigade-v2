@@ -17,7 +17,7 @@ describe User do
     expect(FactoryGirl.build(:user, zip_code: nil)).to_not be_valid
   end
   it "returns a users full name as a string" do
-    expect(FactoryGirl.create(:user, fname: 'Jack', lname: 'Black').name).to eq 'Jack Black'
+    expect(FactoryGirl.build(:user, fname: 'Jack', lname: 'Black').name).to eq 'Jack Black'
   end
   it "is invalid without a correct format email" do
     expect(FactoryGirl.build(:user, email: '@aasdf$')).to_not be_valid
