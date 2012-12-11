@@ -1,0 +1,4 @@
+secret_token: 'secret_token'
+petfinder:
+  key: 'key'
+  secret: 'secret'
