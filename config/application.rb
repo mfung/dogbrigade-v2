@@ -9,6 +9,10 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
+CONFIG = YAML.load(File.read(File.expand_path('../application.yml', __FILE__)))
+CONFIG.merge! CONFIG.fetch(Rails.env, {})
+CONFIG.symbolize_keys!
+
 module DogbrigadeV2
   class Application < Rails::Application
     config.paths["config/routes"] += Dir[Rails.root.join('config', 'routes', '*.rb').to_s]
@@ -63,6 +67,11 @@ module DogbrigadeV2
     
     config.generators do |g|
       g.test_framework :rspec, :views => false
+    end
+    
+    Petfinder.configure do |config|
+      config.api_key = CONFIG[:petfinder][:key]
+      config.api_secret = CONFIG[:petfinder][:secret]
     end
   end
 end
