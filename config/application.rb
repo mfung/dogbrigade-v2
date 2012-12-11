@@ -71,8 +71,8 @@ module DogbrigadeV2
     end
     
     Petfinder.configure do |config|
-      config.api_key = CONFIG[:petfinder][:key]
-      config.api_secret = CONFIG[:petfinder][:secret]
+      config.api_key = CONFIG[:petfinder_key]
+      config.api_secret = CONFIG[:petfinder_secret]
     end
   end
 end
