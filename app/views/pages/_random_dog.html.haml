@@ -1,0 +1,30 @@
+- shelter = PetGateway.new.shelter(dog.shelter_id)
+%div#random-dog
+  %ul.thumbnails
+    %li.span4
+      %div.thumbnail
+        %a{href: '#'}
+          = image_tag dog.pictures[0].medium
+        %h3.name= "#{dog.name.try(:humanize)}"
+        %p.dog-info
+          %span.age= "<b>Age:</b> #{dog.age}".html_safe
+          %br
+          %span.sex= "<b>Sex:</b> #{SEX[dog.sex]}".html_safe
+          %br
+          %span.status= "<b>Status:</b> #{STATUS[dog.status]}".html_safe
+        %p.shelter-info
+          %h4= 'Shelter'
+          
+          %address
+            %strong= "#{shelter.name}"
+            %br
+            = "#{shelter.address1} <br />".html_safe if shelter.address1.size > 1
+            = "#{shelter.address2} <br />".html_safe if shelter.address2.size > 1
+            = "#{shelter.city}, #{shelter.state} #{shelter.zip}"
+          %address
+            %strong Contact
+            %br 
+            = "<b>Phone:</b> #{shelter.phone}".html_safe
+            %br
+            = "<b>Email:</b> #{shelter.email}".html_safe
+          
