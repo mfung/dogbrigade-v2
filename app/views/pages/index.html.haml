@@ -1,8 +1,11 @@
-.alert.alert-info
-  %b Find an adoptable dog:
-- if current_user 
-  %h1= "Welcome, #{current_user.name}"
-- else
-  %h1= "Welcome"
-%p
-  this is a test 
+.span4
+  = render partial: 'random_dog', locals: {dog: @presenter.random_dog}
+.span8
+  .alert.alert-info
+    %b Find an adoptable dog:
+  - if current_user 
+    %h1= "Welcome, #{current_user.name}"
+  - else
+    %h1= "Welcome"
+  %p
+    this is a test 
