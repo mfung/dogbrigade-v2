@@ -5,7 +5,11 @@ module Pages
     end
     
     def random_dog
-      @random_dog ||= PetGateway.new.random
+      if @user && @user.try(:zip_code)
+        @random_dog ||= PetGateway.new.random(@user.zip_code)
+      else
+        @random_dog ||= PetGateway.new.random
+      end
     end
   end
 end

@@ -11,8 +11,8 @@ class PetGateway
     @petfinder.find_pets(options[:animal_type], options[:location], options)
   end
   
-  def random
-    @petfinder.random_pet(:animal => 'dog')
+  def random(zip_code = nil)
+    @petfinder.random_pet(animal: 'dog', location: zip_code)
   end
   
   def breeds(animal_type = 'dog')
