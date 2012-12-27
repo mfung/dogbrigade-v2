@@ -2,7 +2,7 @@ require 'spec_helper'
 feature 'Sessions Management', %q{
   As a dog lover
   In order to make it easier to search for dogs
-  I need to be able to login and loggout
+  I need to be able to login and logout
 } do
   context 'guest' do
     describe 'Sessions#new' do

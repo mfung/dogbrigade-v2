@@ -4,7 +4,7 @@
     %li.span4
       %div.thumbnail
         %a{href: '#'}
-          = image_tag dog.pictures[0].medium
+          = image_tag dog.pictures[0].try(:medium)
         %h3.name= "#{dog.name.try(:humanize)}"
         %p.dog-info
           %span.age= "<b>Age:</b> #{dog.age}".html_safe
