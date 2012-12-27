@@ -1,3 +1,13 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#random-dog ul li div.thumbnail {
+  width: 290px;
+  overfollow: hidden;
+}
+
+#random-dog ul li div.thumbnail img {
+  width: 290px;
+  height: auto;
+}
