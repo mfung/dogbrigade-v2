@@ -8,4 +8,4 @@ before_install:
   - gem install bundler --pre
 before_script:
   - "cp config/database.travis.example.yml config/database.yml"
-  - "cp config/application.example.yml config/application.yml:"
+  - "cp config/application.example.yml config/application.yml"
