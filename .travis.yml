@@ -7,7 +7,8 @@ rvm:
   - 1.9.3
 env:
   global:
-    - secure: "CqukOUs1K7dYVeiE9JNybxJv+S8NnDq7juigQldCD+wwgDUnOPYiUKC/vCzH\nWxxs77qrHJpCzO03rhh7/ZgYKNm4/M/mD2+2TSWOkcb7WikVXbdIDm2KkRC9\nbrzCNEfXz0oKCa4RTvI0nUtJ0s7xo6mv1qoV37+f7jxACAVFbak=" secure: "PrmnhI9hQTqQIUWzpCAumYfDEF7l8fH0mSsE1Ysb6qjecMOPV55yfuxZjXvn\nuLYUyw9ckCEt3DGYl+dpTr42Od5uTrZRWoAAp5/9q05irJTNKA2tII3KN+hl\nrknf6Y1x/7weoMljKSHd8+fjU2NdZlO1gpwI7q+rrwnq2yeMl1c="
+    - secure: "CqukOUs1K7dYVeiE9JNybxJv+S8NnDq7juigQldCD+wwgDUnOPYiUKC/vCzH\nWxxs77qrHJpCzO03rhh7/ZgYKNm4/M/mD2+2TSWOkcb7WikVXbdIDm2KkRC9\nbrzCNEfXz0oKCa4RTvI0nUtJ0s7xo6mv1qoV37+f7jxACAVFbak=" 
+    - secure: "PrmnhI9hQTqQIUWzpCAumYfDEF7l8fH0mSsE1Ysb6qjecMOPV55yfuxZjXvn\nuLYUyw9ckCEt3DGYl+dpTr42Od5uTrZRWoAAp5/9q05irJTNKA2tII3KN+hl\nrknf6Y1x/7weoMljKSHd8+fjU2NdZlO1gpwI7q+rrwnq2yeMl1c="
 bundler_args: "--without development"
 before_install:
   - gem install bundler --pre
