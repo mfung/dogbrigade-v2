@@ -1,4 +1,3 @@
 secret_token: 'thisisanexample123sdfajsdl234234kjawfkajdslasdfasdfgaoiyeuaisdfhj'
-petfinder:
-  key: 'thisisanexamplekey123123123123123'
-  secret: 'thisisanexample122112312312312'
+petfinder_key: 'thisisanexamplekey123123123123123'
+petfinder_secret: 'thisisanexample122112312312312'
