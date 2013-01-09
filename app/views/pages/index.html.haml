@@ -1,5 +1,5 @@
 .span4
-  = #render partial: 'random_dog', locals: {dog: @presenter.random_dog}
+  = render partial: 'random_dog', locals: {dog: @presenter.random_dog}
 .span8
   = render partial: 'shared/find_dog_mini_form'
   - if current_user 
