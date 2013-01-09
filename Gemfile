@@ -6,7 +6,6 @@ gem 'rails', '3.2.9'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-gem 'travis'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -46,6 +45,7 @@ gem 'turbolinks'
 gem 'cache_digests'
 
 group :development, :test do
+  gem 'travis'
   gem 'awesome_print'
   gem 'faker'
   gem 'populator'
