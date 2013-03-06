@@ -1,7 +1,7 @@
 dogbrigade-v2
 =============
 
-dogbrigade version 2 opensource awesomeness
+dogbrigade version 2 opensource awesomeness [![Build Status](https://travis-ci.org/mfung/dogbrigade-v2.png?branch=master)](https://travis-ci.org/mfung/dogbrigade-v2) [![Code Climate](https://codeclimate.com/github/mfung/dogbrigade-v2.png)](https://codeclimate.com/github/mfung/dogbrigade-v2)
 
 # Database
 ## Initial Database Setup with Postgres
