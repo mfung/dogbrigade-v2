@@ -5,6 +5,6 @@ class SearchController < ApplicationController
   def show
   end
 
-  def result
+  def results
   end
 end
