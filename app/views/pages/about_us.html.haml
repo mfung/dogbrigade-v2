@@ -1,8 +1,10 @@
 #left-sidebar.span3
   %div.curved-box
     .header Cookie
+    = image_tag 'cookie.jpg', class: 'img-polaroid'
   %div.curved-box
     .header Tuffy
+    = image_tag 'tuffy.jpg', class: 'img-polaroid'
 #right-content.span9
   = render partial: 'shared/find_dog_mini_form'
   %blockquote
@@ -10,5 +12,11 @@
     .small A little information about who we are and why we are doing this.
 
   %ul.nav.nav-tabs
-    %li{class: "#{'active' if params[:dog] == 'cookie' || params[:dog].blank?}"}= link_to 'Cookie', about_us_path(dog: 'cookie')
-    %li{class: "#{'active' if params[:dog] == 'tuffy'}"}= link_to 'Tuffy', about_us_path(dog: 'tuffy')
+    %li{class: "#{'active' if params[:dog] == 'cookie' || params[:dog].blank?}"}= link_to 'Cookie', about_us_path, 'data-window' => 'cookie'
+    %li{class: "#{'active' if params[:dog] == 'tuffy'}"}= link_to 'Tuffy', about_us_path, 'data-window' => 'tuffy'
+
+  %div#cookie.window
+    %p
+      My first dog. This site was created for her. Cookie passed away 09/2012, I had the joy of having her for 15 years and 6 months.
+  %div#tuffy.window{style: 'display:none;'}
+    %p To my surprise I had the chance to rescue him from a life of being chained up in a backyard.  Now he has the run of the house, and all the tennis balls he can chew on.
