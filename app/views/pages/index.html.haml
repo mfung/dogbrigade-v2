@@ -1,10 +1,13 @@
-.span4
+#left-sidebar.span4
   = render partial: 'random_dog', locals: {dog: @presenter.random_dog}
-.span8
+#right-content.span8
   = render partial: 'shared/find_dog_mini_form'
-  - if current_user 
-    %h1= "Welcome, #{current_user.name}"
-  - else
-    %h1= "Welcome"
-  %p
-    this is a test 
+    
+  %blockquote
+    - if current_user 
+      %p.large= "Welcome, #{current_user.name}"
+    - else
+      %p.large= "Welcome, Fellow dog lover!"
+    %p
+      Please use this website to help adopt your next pet.  We believe that so many good adoptable dogs are out there, why pay for one when these guys are ready and waiting to give you all the love they can afford.
+    %p= "--Meng"

@@ -1,31 +1,31 @@
 - shelter = PetGateway.new.shelter(dog.shelter_id)
-%div#random-dog
-  %ul.thumbnails
-    %li.span4
-      %div.thumbnail
-        %a{href: '#'}
-          - if image_tag dog.pictures[0].try(:medium).present?
-            = image_tag dog.pictures[0].try(:medium)
-        %h3.name= "#{dog.name.try(:humanize)}"
-        %p.dog-info
-          %span.age= "<b>Age:</b> #{dog.age}".html_safe
-          %br
-          %span.sex= "<b>Sex:</b> #{SEX[dog.sex]}".html_safe
-          %br
-          %span.status= "<b>Status:</b> #{STATUS[dog.status]}".html_safe
-        %p.shelter-info
-          %h4= 'Shelter'
-          
-          %address
-            %strong= "#{shelter.name}"
-            %br
-            = "#{shelter.address1} <br />".html_safe if shelter.address1.size > 1
-            = "#{shelter.address2} <br />".html_safe if shelter.address2.size > 1
-            = "#{shelter.city}, #{shelter.state} #{shelter.zip}"
-          %address
-            %strong Contact
-            %br 
-            = "<b>Phone:</b> #{shelter.phone}".html_safe
-            %br
-            = "<b>Email:</b> #{shelter.email}".html_safe
+%div#random-dog.curved-box
+  .header= "#{dog.name.try(:humanize)}"
+  %div.thumbnail
+    %a{href: '#'}
+      - if image_tag dog.pictures[0].try(:medium).present?
+        = image_tag dog.pictures[0].try(:medium), class: 'img-polaroid'
+  %h3.name
+  %p.dog-info
+    %span.age= "<b>Age:</b> #{dog.age}".html_safe
+    %br
+    %span.sex= "<b>Sex:</b> #{SEX[dog.sex]}".html_safe
+    %br
+    %span.status= "<b>Status:</b> #{STATUS[dog.status]}".html_safe
+  %p.shelter-info
+    %h4= 'Shelter'
+    
+    %address
+      %strong= "#{shelter.name}"
+      %br
+      = "#{shelter.address1} <br />".html_safe if shelter.address1.size > 1
+      = "#{shelter.address2} <br />".html_safe if shelter.address2.size > 1
+      = "#{shelter.city}, #{shelter.state} #{shelter.zip}"
+    %address
+      %strong Contact
+      %br 
+      = "<b>Phone:</b> #{shelter.phone}".html_safe
+      %br
+      - if shelter.email.present?
+        = mail_to shelter.email, "<b>Email:</b> #{shelter.email}".html_safe, subject: "I found #{dog.name.try(:humanize)} on dogbrigade.com | ID: #{dog.id} | and I would like to know how would be able to adopt him/her."
           
