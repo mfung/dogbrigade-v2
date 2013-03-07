@@ -20,6 +20,9 @@ DogbrigadeV2::Application.routes.draw do
   
   resources :users
   resources :sessions
+  resources :search, :only => [:index, :show] do 
+    post :results, on: :collection
+  end
   
   # Sample resource route with options:
   #   resources :products do

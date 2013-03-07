@@ -3,9 +3,9 @@ class PetGateway
     @petfinder ||= Petfinder::Client.new
   end
   
-  # options animal_type: location: breed: size: sex: location: shelterid:
+  # options animal_type: location: breed: size: sex: location: shelterid: offset: count: age:
   def find(options = {})
-    defaults = {:animal_type => 'dog', :location => '90210'}
+    defaults = {animal_type: 'dog', location: '90210'}
     options = defaults.merge(options)
     
     @petfinder.find_pets(options[:animal_type], options[:location], options)
@@ -29,7 +29,7 @@ class PetGateway
   
   # options location: name: offset: count:
   def find_shelters(options = {})
-    defaults = {:location => '90210'}
+    defaults = {location: '90210'}
     options = defaults.merge(options)
     
     @petfinder.find_shelters(options[:location], options)
@@ -37,7 +37,7 @@ class PetGateway
   
   # options animal_type: breed: offset: count:
   def find_shelters_by_breed(options = {})
-    defaults = {:animal_type => 'dog', :breed => 'German Shepherd Dog'}
+    defaults = {animal_type: 'dog', breed: 'German Shepherd Dog'}
     options = defaults.merge(options)
     
     @petfinder.find_shelters_by_breed(options[:animal_type], options[:breed])
@@ -45,7 +45,7 @@ class PetGateway
   
   # options id: status: offset: count:
   def shelter_pets(options = {})
-    defaults = {:id => 1}
+    defaults = {id: 1}
     options = defaults.merge(options)
     
     @petfinder.shelter_pets(options[:id], options)

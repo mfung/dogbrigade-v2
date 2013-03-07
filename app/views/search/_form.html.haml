@@ -1,0 +1,4 @@
+= simple_form_for :search, html: {class: 'form form-horizontal', id: 'search'} do |f|
+  = f.input :breed, label: 'Breed', collection: list_dog_breeds, include_blank: false
+  = f.input :age, label: 'Age', collection: ['Baby', 'Young', 'Adult', 'Senior'], include_blank: false
+  = f.input :sex, label: 'Sex', collection: [['Male', 'M'],['Female','F']], include_blank: false

@@ -4,6 +4,9 @@ class ApplicationController < ActionController::Base
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
+  def list_custom_dog_breeds
+
+  end
   def list_dog_breeds
   	@dog_breeds ||= dog_breeds
   end

@@ -4,8 +4,8 @@
     %ul.nav
       %li{class: "#{'active' if current_uri == '/'}"}
         = link_to '<i class="icon-home icon-white"></i>Home'.html_safe, root_path
-      %li
-        = link_to '<i class="icon-search icon-white"></i>Search'.html_safe, '#'
+      %li{class: "#{'active' if current_uri == '/search'}"}
+        = link_to '<i class="icon-search icon-white"></i>Search'.html_safe, search_index_path
       %li
         = link_to '<i class="icon-info-sign icon-white"></i>Information'.html_safe, '#'
       %li

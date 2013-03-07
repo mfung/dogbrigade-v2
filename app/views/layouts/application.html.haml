@@ -9,13 +9,14 @@
 		= yield(:head)
 	%body
 		.container
-			.row.header
+			%section.row.header
 				.span12
 					= image_tag 'dogbrigade-logo.png'
-			.row
+			%section.row
 				.span12
 					= render :partial => 'layouts/global_menu'
 					= render :partial => 'layouts/messages'
-			#content-body.row-fluid
+			%section#content-body.row-fluid
 				= yield
+			%section#footer.row
       

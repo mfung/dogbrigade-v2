@@ -43,6 +43,7 @@ gem 'rabl'
 gem 'rest-client'
 gem 'turbolinks'
 gem 'cache_digests'
+gem 'simple_form'
 
 group :development, :test do
   gem 'travis'

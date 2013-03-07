@@ -1,7 +1,7 @@
 - shelter = PetGateway.new.shelter(dog.shelter_id)
 %div#random-dog.curved-box
   .header= "#{dog.name.try(:humanize)}"
-  %div.thumbnail
+  %div.thumbnail2
     %a{href: '#'}
       - if image_tag dog.pictures[0].try(:medium).present?
         = image_tag dog.pictures[0].try(:medium), class: 'img-polaroid'
