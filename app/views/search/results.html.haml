@@ -1,2 +1,44 @@
-%h1 Search#result
-%p Find me in app/views/search/result.html.haml
+#full-content.span12
+  %br
+  %blockquote
+    %p.large Search Results for:
+    .small= "Breed: <b>#{@presenter.searched_dog[:breed]}</b> | Age: <b>#{@presenter.searched_dog[:age]}</b> | Sex: <b>#{@presenter.searched_dog[:sex]}</b> | Size: <b>#{@presenter.searched_dog[:size]}</b> | Location: <b>#{@presenter.searched_dog[:location]}</b>".html_safe
+
+  .curved-box
+    .header Dogs Found
+    %table.table.table-condensed.table-striped
+      %thead
+        %tr
+          %th.span2 Picture
+          %th Name
+          %th Breed(s)
+          %th.span1 Mix
+          %th.span1 Status
+          %th.span2 Location
+          %th.span2 Follow
+      %tbody
+        - if @presenter.dogs.count > 0
+          = render partial: 'dog_item', collection: @presenter.dogs
+        - else
+          %tr
+            %td{colspan: 7} No results found.
+  %div
+    - if @presenter.page.to_i > 0
+      %div.pull-left
+        = simple_form_for :search, url: results_search_index_path, html: {class: 'form form-horizontal', id: 'search-prev'} do |f|
+          = f.input :breed, :as => :hidden, :input_html => { :value => @presenter.searched_dog[:breed] }
+          = f.input :age, :as => :hidden, :input_html => { :value => @presenter.searched_dog[:age] }
+          = f.input :sex, :as => :hidden, :input_html => { :value => @presenter.searched_dog[:sex] }
+          = f.input :size, :as => :hidden, :input_html => { :value => @presenter.searched_dog[:size] }
+          = f.input :location, :as => :hidden, :input_html => { :value => @presenter.searched_dog[:location] }
+          = f.input :page, :as => :hidden, :input_html => { :value => @presenter.page.to_i - 1}
+          = f.submit 'Previous', class: 'btn'
+    %div.pull-right
+      = simple_form_for :search, url: results_search_index_path, html: {class: 'form form-horizontal', id: 'search-prev'} do |f|
+        = f.input :breed, :as => :hidden, :input_html => { :value => @presenter.searched_dog[:breed] }
+        = f.input :age, :as => :hidden, :input_html => { :value => @presenter.searched_dog[:age] }
+        = f.input :sex, :as => :hidden, :input_html => { :value => @presenter.searched_dog[:sex] }
+        = f.input :size, :as => :hidden, :input_html => { :value => @presenter.searched_dog[:size] }
+        = f.input :location, :as => :hidden, :input_html => { :value => @presenter.searched_dog[:location] }
+        = f.input :page, :as => :hidden, :input_html => { :value => @presenter.page.to_i + 1}
+        = f.submit 'Next', class: 'btn'

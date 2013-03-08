@@ -6,5 +6,6 @@ class SearchController < ApplicationController
   end
 
   def results
+    @presenter = ::Search::ResultsPresenter.new(current_user, pet_gateway, params[:search], params[:search][:page])
   end
 end

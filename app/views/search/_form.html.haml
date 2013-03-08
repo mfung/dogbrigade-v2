@@ -3,6 +3,6 @@
   = f.input :age, label: 'Age', collection: ['Baby', 'Young', 'Adult', 'Senior'], include_blank: false
   = f.input :sex, label: 'Sex', collection: [['Male', 'M'],['Female','F']], include_blank: false
   = f.input :size, label: 'Size', collection: [['Small', 'S'], ['Medium', 'M'], ['Large', 'L'], ['Extra Large', 'XL']], include_blank: false
-  = f.input :location, label: 'Location (Zip Code)'
+  = f.input :location, label: 'Location (Zip Code)', input_html: {value: "#{current_user.zip_code if current_user}"}
   .form-actions
     = f.submit 'Search', class: 'btn btn-primary'

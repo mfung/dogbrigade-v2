@@ -1,6 +1,6 @@
 .curved-box
   .header Find an adoptable dog:
-  = form_for 'quick_search', method: :post, html: {class: 'form-inline'} do |f|
+  = form_for :search, url: results_search_index_path, method: :post, html: {class: 'form-inline'} do |f|
     = f.select :breed, list_dog_breeds, {}, {class: 'span5'}
-    = f.text_field :zip_code, value: session[:zip_code], class: 'text_field span2', placeholder: 'Zip Code'
+    = f.text_field :location, value: session[:zip_code], class: 'text_field span2', placeholder: 'Zip Code'
     = f.submit 'Search', class: 'btn btn-primary'
