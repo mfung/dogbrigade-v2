@@ -8,7 +8,7 @@ module Search
     end
     
     def dogs
-      @dogs = @pet_gateway.find(@search_params.merge({offset: @page, count:10}))
+      @dogs = @pet_gateway.find(@search_params.merge({offset: @page.to_i*10, count:10}))
     end
 
     def searched_dog
