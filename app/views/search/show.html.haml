@@ -18,7 +18,7 @@
       .curved-box
         .header Description
         - if @presenter.dog.description.present?
-          = sanitize @presenter.dog.description.html_safe, tags: %w(p br)
+          = sanitize @presenter.dog.description.squeeze('<br>').squeeze('<br />').html_safe, tags: %w(p br)
         - else
           %p
             No information supplied
