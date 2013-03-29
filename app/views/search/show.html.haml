@@ -1,2 +1,18 @@
-%h1 Search#show
-%p Find me in app/views/search/show.html.haml
+#full-content.span12
+  %br
+  %blockquote
+    %p.large= @presenter.dog.name
+    .small= STATUS[@presenter.dog.status]
+  .row.span12
+    #dog-pictures.span4
+      .curved-box
+        .header Pictures
+      .curved-box
+        .header Shelter Information
+    #dog-description.span7
+      .curved-box
+        .header Additional Information
+        = render partial: 'show_dog'
+      .curved-box
+        .header Description
+        = @presenter.dog.description.html_safe

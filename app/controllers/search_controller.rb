@@ -3,6 +3,7 @@ class SearchController < ApplicationController
   end
 
   def show
+    @presenter = ::Search::ShowPresenter.new(current_user, pet_gateway, params[:id])
   end
 
   def results

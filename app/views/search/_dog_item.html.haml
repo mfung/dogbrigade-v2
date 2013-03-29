@@ -1,6 +1,6 @@
 %tr
   %td= image_tag dog_item.pictures[0].try(:tiny), class: 'img-polaroid'
-  %td= dog_item.name
+  %td= link_to dog_item.name, search_path(dog_item.id)
   %td= dog_item.breeds.join(', ')
   %td= dog_item.mix.humanize
   %td= STATUS[dog_item.status]
