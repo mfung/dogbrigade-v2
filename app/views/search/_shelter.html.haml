@@ -1,0 +1,25 @@
+#shelter-information
+  %table.table.table-condensed.table-striped
+    %tbody
+      %tr
+        %td.span1 Name
+        %td= shelter.name
+      %tr
+        %td Address
+        %td
+          - if shelter.address1.present?
+            = shelter.address1
+            %br
+          - if shelter.address2.present?
+            = shelter.address2
+            %br
+          = "#{shelter.city}, #{shelter.state} #{shelter.zip}"
+      %tr
+        %td Phone
+        %td= shelter.phone
+      %tr
+        %td Fax
+        %td= shelter.fax
+      %tr
+        %td Email
+        %td= shelter.email

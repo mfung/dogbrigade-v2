@@ -1,24 +1,24 @@
-%table.table.table-condensed.table-striped
-  %tbody
-    %tr
-      %td.span2 Name
-      %td= @presenter.dog.name.humanize
-    %tr
-      %td Adoption Status
-      %td= STATUS[@presenter.dog.status]
-    %tr
-      %td Mix
-      %td= @presenter.dog.mix.humanize
-    %tr
-      %td Breed(s)
-      %td= @presenter.dog.breeds.join(', ')
-    %tr
-      %td Age
-      %td= @presenter.dog.age
-    %tr
-      %td Size
-      %td= @presenter.dog.size
-    %tr
-      %td Last Updated
-      - update_date = DateTime.parse(@presenter.dog.last_update)
-      %td= update_date.strftime('%a %b %d %H:%M:%S %Z %Y')
+#dog-information
+  %table.table.table-condensed.table-striped
+    %tbody
+      %tr
+        %td.span2 Name
+        %td= dog.name.humanize
+      %tr
+        %td Adoption Status
+        %td= STATUS[dog.status]
+      %tr
+        %td Mix
+        %td= dog.mix.humanize
+      %tr
+        %td Breed(s)
+        %td= dog.breeds.join(', ')
+      %tr
+        %td Age
+        %td= dog.age
+      %tr
+        %td Size
+        %td= dog.size
+      %tr
+        %td Last Updated
+        %td= dog.last_update.strftime('%B %d, %Y %I:%M %P')

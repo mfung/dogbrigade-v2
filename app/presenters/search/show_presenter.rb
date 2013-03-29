@@ -9,5 +9,9 @@ module Search
     def dog
       @dog = @pet_gateway.pet(@pet_id)
     end
+
+    def shelter
+      @shelter = @pet_gateway.shelter(@dog.shelter_id)
+    end
   end
 end

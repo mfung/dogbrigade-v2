@@ -7,12 +7,18 @@
     #dog-pictures.span4
       .curved-box
         .header Pictures
+        = render partial: 'pictures', locals: {pictures: @presenter.dog.pictures}
       .curved-box
         .header Shelter Information
+        = render partial: 'shelter', locals: {shelter: @presenter.shelter}
     #dog-description.span7
       .curved-box
         .header Additional Information
-        = render partial: 'show_dog'
+        = render partial: 'show_dog', locals: {dog: @presenter.dog}
       .curved-box
         .header Description
-        = @presenter.dog.description.html_safe
+        - if @presenter.dog.description.present?
+          = sanitize @presenter.dog.description.html_safe, tags: %w(p br)
+        - else
+          %p
+            No information supplied
