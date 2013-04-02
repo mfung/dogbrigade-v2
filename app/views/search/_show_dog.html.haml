@@ -8,6 +8,9 @@
         %td Adoption Status
         %td= STATUS[dog.status]
       %tr
+        %td Sex
+        %td= SEX[dog.sex]
+      %tr
         %td Mix
         %td= dog.mix.humanize
       %tr
@@ -18,7 +21,7 @@
         %td= dog.age
       %tr
         %td Size
-        %td= dog.size
+        %td= SIZE[dog.size]
       %tr
         %td Last Updated
         %td= dog.last_update.strftime('%B %d, %Y %I:%M %P')

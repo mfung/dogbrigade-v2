@@ -1,10 +1,12 @@
 #left-sidebar.span3
   %div.curved-box
     .header Cookie
-    = image_tag 'cookie.jpg', class: 'img-polaroid'
+    .text-center
+      = image_tag 'cookie.jpg', class: 'img-polaroid'
   %div.curved-box
     .header Tuffy
-    = image_tag 'tuffy.jpg', class: 'img-polaroid'
+    .text-center
+      = image_tag 'tuffy.jpg', class: 'img-polaroid'
 #right-content.span9
   = render partial: 'shared/find_dog_mini_form'
   %blockquote

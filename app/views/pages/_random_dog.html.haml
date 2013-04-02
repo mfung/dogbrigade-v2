@@ -5,7 +5,7 @@
     %a{href: '#'}
       - if image_tag dog.pictures[0].try(:medium).present?
         = image_tag dog.pictures[0].try(:medium), class: 'img-polaroid'
-  %h3.name
+  %h3.name= "#{dog.name.try(:humanize)}"
   %p.dog-info
     %span.age= "<b>Age:</b> #{dog.age}".html_safe
     %br
@@ -28,4 +28,5 @@
       %br
       - if shelter.email.present?
         = mail_to shelter.email, "<b>Email:</b> #{shelter.email}".html_safe, subject: "I found #{dog.name.try(:humanize)} on dogbrigade.com | ID: #{dog.id} | and I would like to know how would be able to adopt him/her."
-          
+  .text-center
+    = link_to 'Click for more information.', search_path(dog.id), class: 'btn btn-primary'

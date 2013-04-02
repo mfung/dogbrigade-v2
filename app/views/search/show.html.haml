@@ -7,7 +7,8 @@
     #dog-pictures.span4
       .curved-box
         .header Pictures
-        = render partial: 'pictures', locals: {pictures: @presenter.dog.pictures}
+        .text-center
+          = render partial: 'pictures', locals: {pictures: @presenter.dog.pictures}
       .curved-box
         .header Shelter Information
         = render partial: 'shelter', locals: {shelter: @presenter.shelter}
@@ -22,3 +23,7 @@
         - else
           %p
             No information supplied
+      .curved-box
+        .header Resources
+        - breed = @presenter.dog.breeds.first
+        = link_to "Wikipedia Information on #{breed}", "http://en.wikipedia.org/wiki/#{breed}", target: '_blank'
